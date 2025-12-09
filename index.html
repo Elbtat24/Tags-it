@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>وسوم HTML وخصائص CSS</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+        
+        * {
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #2980b9;
+            border-right: 4px solid #3498db;
+            padding-right: 10px;
+            margin-top: 25px;
+        }
+        
+        .category {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            text-align: right;
+        }
+        
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: right;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .tag-name {
+            font-family: monospace;
+            background-color: #2c3e50;
+            color: white;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .property-name {
+            font-family: monospace;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #7f8c8d;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+        
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 دليل وسوم HTML وخصائص CSS</h1>
+        <p style="text-align: center; color: #7f8c8d;"> let's do it</p>
+        
+        <!-- Structure Tags -->
+        <div class="category">
+            <h2>🏗️ تاجات هيكل الصفحة (Structure Tags)</h2>
+            <table>
+                <tr>
+                    <th width="30%">الوسم</th>
+                    <th>الوظيفة</th>
+                </tr>
+                <tr><td><span class="tag-name">&lt;!DOCTYPE html&gt;</span></td><td>تعريف نوع الوثيقة بأنها HTML5</td></tr>
+                <tr><td><span class="tag-name">&lt;html&gt;</span></td><td>الجذر الأساسي للصفحة</td></tr>
+                <tr><td><span class="tag-name">&lt;head&gt;</span></td><td>يحتوي البيانات غير الظاهرة للمستخدم</td></tr>
+                <tr><td><span class="tag-name">&lt;body&gt;</span></td><td>كل المحتوى الذي يظهر للمستخدم</td></tr>
+            </table>
+        </div>
+        
+        <!-- Head Tags -->
+        <div class="category">
+            <h2>🔖 تاجات الميتا والروابط (Head Tags)</h2>
+            <table>
+                <tr>
+                    <th width="30%">الوسم</th>
+                    <th>الوظيفة</th>
+                </tr>
+                <tr><td><span class="tag-name">&lt;title&gt;</span></td><td>عنوان الصفحة في المتصفح</td></tr>
+                <tr><td><span class="tag-name">&lt;meta&gt;</span></td><td>معلومات مثل الترميز والـ SEO</td></tr>
+                <tr><td><span class="tag-name">&lt;link&gt;</span></td><td>ربط ملف CSS خارجي</td></tr>
+                <tr><td><span class="tag-name">&lt;style&gt;</span></td><td>كتابة CSS داخل الصفحة</td></tr>
+                <tr><td><span class="tag-name">&lt;script&gt;</span></td><td>ربط/كتابة أكواد JavaScript</td></tr>
+            </table>
+        </div>
+        
+        <!-- Text Tags -->
+        <div class="category">
+            <h2>📝 تاجات النصوص (Text tags)</h2>
+            <table>
+                <tr>
+                    <th width="30%">الوسم</th>
+                    <th>الوظيفة</th>
+                </tr>
+                <tr><td><span class="tag-name">&lt;h1&gt; ~ &lt;h6&gt;</span></td><td>عناوين من كبير لصغير</td></tr>
+                <tr><td><span class="tag-name">&lt;p&gt;</span></td><td>فقرة نص</td></tr>
+                <tr><td><span class="tag-name">&lt;span&gt;</span></td><td>نص صغير داخل السطر ولا يبدأ سطر جديد</td></tr>
+                <tr><td><span class="tag-name">&lt;br&gt;</span></td><td>كسر سطر</td></tr>
+                <tr><td><span class="tag-name">&lt;hr&gt;</span></td><td>خط فاصل</td></tr>
+                <tr><td><span class="tag-name">&lt;strong&gt;</span></td><td>نص غامق مهم (SEO)</td></tr>
+                <tr><td><span class="tag-name">&lt;b&gt;</span></td><td>نص غامق بدون معنى دلالي</td></tr>
+                <tr><td><span class="tag-name">&lt;em&gt;</span></td><td>نص مائل مهم (SEO)</td></tr>
+                <tr><td><span class="tag-name">&lt;i&gt;</span></td><td>نص مائل فقط</td></tr>
+                <tr><td><span class="tag-name">&lt;mark&gt;</span></td><td>تظليل النص</td></tr>
+                <tr><td><span class="tag-name">&lt;small&gt;</span></td><td>نص بحجم صغير</td></tr>
+            </table>
+        </div>
+        
+        <!-- Links & Images -->
+        <div class="category">
+            <h2>🔗 تاجات الروابط والصور</h2>
+            <table>
+                <tr>
+                    <th width="30%">الوسم</th>
+                    <th>الوظيفة</th>
+                </tr>
+                <tr><td><span class="tag-name">&lt;a&gt;</span></td><td>رابط لصفحة أو ملف أو جزء من الصفحة</td></tr>
+                <tr><td><span class="tag-name">&lt;img&gt;</span></td><td>صورة</td></tr>
+                <tr><td><span class="tag-name">&lt;picture&gt;</span></td><td>صور متعددة حسب حجم الشاشة</td></tr>
+                <tr><td><span class="tag-name">&lt;figure&gt;</span></td><td>إطار للصورة</td></tr>
+                <tr><td><span class="tag-name">&lt;figcaption&gt;</span></td><td>تعليق أسفل الصورة</td></tr>
+            </table>
+        </div>
+        
+        <!-- Lists -->
+        <div class="category">
+            <h2>📋 تاجات القوائم (Lists)</h2>
+            <table>
+                <tr>
+                    <th width="30%">الوسم</th>
+                    <th>الوظيفة</th>
+                </tr>
+                <tr><td><span class="tag-name">&lt;ul&gt;</span></td><td>قائمة نقطية</td></tr>
+                <tr><td><span class="tag-name">&lt;ol&gt;</span></td><td>قائمة مرقمة</td></tr>
+                <tr><td><span class="tag-name">&lt;li&gt;</span></td><td>عنصر داخل قائمة</td></tr>
+                <tr><td><span class="tag-name">&lt;dl&gt;</span></td><td>قائمة تعريف</td></tr>
+                <tr><td><span class="tag-name">&lt;dt&gt;</span></td><td>المصطلح</td></tr>
+                <tr><td><span class="tag-name">&lt;dd&gt;</span></td><td>التعريف</td></tr>
+            </table>
+        </div>
+        
+        <!-- Tables -->
+        <div class="category">
+            <h2>📊 تاجات الجداول (Tables)</h2>
+            <table>
+                <tr>
+                    <th width="30%">الوسم</th>
+                    <th>الوظيفة</th>
+                </tr>
+                <tr><td><span class="tag-name">&lt;table&gt;</span></td><td>إنشاء جدول</td></tr>
+                <tr><td><span class="tag-name">&lt;tr&gt;</span></td><td>صف</td></tr>
+                <tr><td><span class="tag-name">&lt;td&gt;</span></td><td>خلية</td></tr>
+                <tr><td><span class="tag-name">&lt;th&gt;</span></td><td>خلية عنوان</td></tr>
+                <tr><td><span class="tag-name">&lt;thead&gt;</span></td><td>ترويسة الجدول</td></tr>
+                <tr><td><span class="tag-name">&lt;tbody&gt;</span></td><td>جسم الجدول</td></tr>
+                <tr><td><span class="tag-name">&lt;tfoot&gt;</span></td><td>تذييل الجدول</td></tr>
+                <tr><td><span class="tag-name">&lt;caption&gt;</span></td><td>عنوان الجدول</td></tr>
+            </table>
+        </div>
+        
+        <!-- Forms -->
+        <div class="category">
+            <h2>📝 تاجات الإدخال والنماذج (Forms)</h2>
+            <table>
+                <tr>
+                    <th width="30%">الوسم</th>
+                    <th>الوظيفة</th>
+                </tr>
+                <tr><td><span class="tag-name">&lt;form&gt;</span></td><td>نموذج إدخال بيانات</td></tr>
+                <tr><td><span class="tag-name">&lt;input&gt;</span></td><td>مربع نص/إيميل/رقم/زر حسب النوع</td></tr>
+                <tr><td><span class="tag-name">&lt;textarea&gt;</span></td><td>مربع نص كبير</td></tr>
+                <tr><td><span class="tag-name">&lt;button&gt;</span></td><td>زر</td></tr>
+                <tr><td><span class="tag-name">&lt;label&gt;</span></td><td>تسمية حقل</td></tr>
+                <tr><td><span class="tag-name">&lt;select&gt;</span></td><td>قائمة منسدلة</td></tr>
+                <tr><td><span class="tag-name">&lt;option&gt;</span></td><td>اختيار داخل القائمة</td></tr>
+                <tr><td><span class="tag-name">&lt;fieldset&gt;</span></td><td>تجميع عناصر form</td></tr>
+                <tr><td><span class="tag-name">&lt;legend&gt;</span></td><td>عنوان لمجموعة حقول</td></tr>
+                <tr><td><span class="tag-name">&lt;datalist&gt;</span></td><td>اقتراحات أثناء الكتابة</td></tr>
+            </table>
+        </div>
+        
+        <!-- Layout -->
+        <div class="category">
+            <h2>📐 تاجات الأقسام (Layout Divisions)</h2>
+            <table>
+                <tr>
+                    <th width="30%">الوسم</th>
+                    <th>الوظيفة</th>
+                </tr>
+                <tr><td><span class="tag-name">&lt;div&gt;</span></td><td>قسم block بدون معنى دلالي</td></tr>
+                <tr><td><span class="tag-name">&lt;section&gt;</span></td><td>قسم له معنى، جزء من المحتوى</td></tr>
+                <tr><td><span class="tag-name">&lt;article&gt;</span></td><td>مقالة مستقلة</td></tr>
+                <tr><td><span class="tag-name">&lt;header&gt;</span></td><td>رأس الصفحة/القسم</td></tr>
+                <tr><td><span class="tag-name">&lt;footer&gt;</span></td><td>ذيل الصفحة/القسم</td></tr>
+                <tr><td><span class="tag-name">&lt;nav&gt;</span></td><td>قائمة تنقل</td></tr>
+                <tr><td><span class="tag-name">&lt;main&gt;</span></td><td>المحتوى الرئيسي</td></tr>
+                <tr><td><span class="tag-name">&lt;aside&gt;</span></td><td>محتوى جانبي</td></tr>
+            </table>
+        </div>
+        
+        <!-- Media -->
+        <div class="category">
+            <h2>🎬 تاجات الميديا (Media Tags)</h2>
+            <table>
+                <tr>
+                    <th width="30%">الوسم</th>
+                    <th>الوظيفة</th>
+                </tr>
+                <tr><td><span class="tag-name">&lt;audio&gt;</span></td><td>تشغيل صوت</td></tr>
+                <tr><td><span class="tag-name">&lt;video&gt;</span></td><td>تشغيل فيديو</td></tr>
+                <tr><td><span class="tag-name">&lt;source&gt;</span></td><td>مصدر للصوت/الفيديو</td></tr>
+                <tr><td><span class="tag-name">&lt;track&gt;</span></td><td>ترجمة للفيديو</td></tr>
+                <tr><td><span class="tag-name">&lt;canvas&gt;</span></td><td>رسومات جافاسكريبت</td></tr>
+                <tr><td><span class="tag-name">&lt;svg&gt;</span></td><td>رسومات vector</td></tr>
+            </table>
+        </div>
+        
+        <!-- Other Tags -->
+        <div class="category">
+            <h2>🔧 تاجات أخرى مهمة</h2>
+            <table>
+                <tr>
+                    <th width="30%">الوسم</th>
+                    <th>الوظيفة</th>
+                </tr>
+                <tr><td><span class="tag-name">&lt;iframe&gt;</span></td><td>عرض صفحة داخل صفحة</td></tr>
+                <tr><td><span class="tag-name">&lt;embed&gt;</span></td><td>تضمين عناصر خارجية</td></tr>
+                <tr><td><span class="tag-name">&lt;object&gt;</span></td><td>تضمين ملف</td></tr>
+                <tr><td><span class="tag-name">&lt;code&gt;</span></td><td>عرض كود</td></tr>
+                <tr><td><span class="tag-name">&lt;pre&gt;</span></td><td>عرض نص بنفس التنسيق والمسافات</td></tr>
+                <tr><td><span class="tag-name">&lt;details&gt;</span></td><td>عنصر قابل للفتح/الإغلاق</td></tr>
+                <tr><td><span class="tag-name">&lt;summary&gt;</span></td><td>العنوان الذي يتم الضغط عليه لفتح التفاصيل</td></tr>
+            </table>
+        </div>
+        
+        <!-- CSS Properties -->
+        <div class="category">
+            <h2>🎨 خصائص CSS الرئيسية</h2>
+            
+            <h3>🎨 الألوان والخلفية</h3>
+            <table>
+                <tr><td><span class="property-name">color</span></td><td>لون النص</td></tr>
+                <tr><td><span class="property-name">background-color</span></td><td>لون الخلفية</td></tr>
+                <tr><td><span class="property-name">background-image</span></td><td>خلفية صورة</td></tr>
+                <tr><td><span class="property-name">opacity</span></td><td>الشفافية</td></tr>
+            </table>
+            
+            <h3>🔤 الخطوط (Font)</h3>
+            <table>
+                <tr><td><span class="property-name">font-size</span></td><td>حجم الخط</td></tr>
+                <tr><td><span class="property-name">font-weight</span></td><td>سمك الخط</td></tr>
+                <tr><td><span class="property-name">font-style</span></td><td>italic</td></tr>
+                <tr><td><span class="property-name">font-family</span></td><td>نوع الخط</td></tr>
+                <tr><td><span class="property-name">text-decoration</span></td><td>خط تحت النص</td></tr>
+                <tr><td><span class="property-name">text-align</span></td><td>محاذاة</td></tr>
+            </table>
+            
+            <h3>📦 الحجم والمسافات</h3>
+            <table>
+                <tr><td><span class="property-name">width</span></td><td>العرض</td></tr>
+                <tr><td><span class="property-name">height</span></td><td>الارتفاع</td></tr>
+                <tr><td><span class="property-name">margin</span></td><td>المسافة الخارجية</td></tr>
+                <tr><td><span class="property-name">padding</span></td><td>المسافة الداخلية</td></tr>
+                <tr><td><span class="property-name">border</span></td><td>حدود العنصر</td></tr>
+                <tr><td><span class="property-name">border-radius</span></td><td>تدوير الحواف</td></tr>
+            </table>
+            
+            <h3>🧱 الترتيب والـ Layout</h3>
+            <table>
+                <tr><td><span class="property-name">display</span></td><td>block, inline, flex, grid</td></tr>
+                <tr><td><span class="property-name">position</span></td><td>relative, absolute, fixed, sticky</td></tr>
+                <tr><td><span class="property-name">top / right / bottom / left</span></td><td>تحديد موقع العنصر</td></tr>
+                <tr><td><span class="property-name">z-index</span></td><td>ترتيب العناصر فوق بعض</td></tr>
+            </table>
+            
+            <h3>⚡ الفليكس (Flexbox)</h3>
+            <table>
+                <tr><td><span class="property-name">display: flex</span></td><td>تفعيل الفليكس</td></tr>
+                <tr><td><span class="property-name">justify-content</span></td><td>توزيع أفقي</td></tr>
+                <tr><td><span class="property-name">align-items</span></td><td>توزيع عمودي</td></tr>
+                <tr><td><span class="property-name">flex-direction</span></td><td>ترتيب العناصر</td></tr>
+            </table>
+            
+            <h3>🧩 الجريد (Grid)</h3>
+            <table>
+                <tr><td><span class="property-name">display: grid</span></td><td>تفعيل الجريد</td></tr>
+                <tr><td><span class="property-name">grid-template-columns</span></td><td>عدد الأعمدة</td></tr>
+                <tr><td><span class="property-name">gap</span></td><td>المسافة بين العناصر</td></tr>
+            </table>
+            
+            <h3>⭐ الأنميشن والانتقالات</h3>
+            <table>
+                <tr><td><span class="property-name">transition</span></td><td>انتقالات سلسة</td></tr>
+                <tr><td><span class="property-name">transform</span></td><td>تدوير/تحجيم</td></tr>
+                <tr><td><span class="property-name">animation</span></td><td>عمل أنيميشن</td></tr>
+            </table>
+        </div>
+        
+        <div class="footer">
+            <p>📚 مرجع وسوم HTML وخصائص CSS - تم إنشاؤه للاستخدام التعليمي</p>
+            <p>🔄 آخر تحديث: ديسمبر 2023</p>
+        </div>
+        
+        <div class="no-print" style="text-align: center; margin-top: 30px; padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+            <p><strong>تعليمات الطباعة:</strong> اضغط على Ctrl+P أو Cmd+P للطباعة وحفظ كـ PDF</p>
+        </div>
+    </div>
+</body>
+</html>
